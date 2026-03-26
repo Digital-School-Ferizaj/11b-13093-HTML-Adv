@@ -16,10 +16,12 @@
 	<h1>HTML Tables, Lists</h1>
 
 
+	<h2>Tabelat</h2>
+
 	<table>
 		<thead>
 			<tr> <!-- tr = table row -->
-				<th>#</th> <!-- th = table head -->
+				<th>#</th> <!-- th = table headings -->
 				<th>Emri</th>
 				<th>Mbiemri</th>
 				<th>Tel</th>
@@ -41,8 +43,13 @@
 			<tr>
 				<td>3</td>  <!-- table data -->
 				<td>John</td>
-				<td>Doe</td>
+				<td rowspan="2">Doe</td>
 				<td>044-123-123</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Jane</td>
+				<td>048-123-123</td>
 			</tr>
 		</tbody>
 		<tfoot>
@@ -51,6 +58,41 @@
 			</tr>
 		</tfoot>
 	</table>
+
+
+	<h2>Listat</h2>
+
+	<p>Ka 3 lloje te listave. Ato jan listat e pa numruara (unordered), listat e numruara (ordered), edhe listat pershkruese (description).
+
+	<ul type="square"> <!-- ul = unordered list -->
+		<li>HTML</li> <!-- li = list item -->
+		<li>CSS</li>
+		<li>JavaScript</li>
+		<li>PhP</li>
+	</ul>
+
+	<ol type="I" start="4">
+		<li>Almira Halili</li>
+		<li>Anise Sherifi</li>
+		<li>Blin Xhemajli</li>
+		<li>Dion Fetahu</li>
+		<li>Elson Krasniqi</li>
+		<li>Erdi Zejnullahu</li>
+		<li>Flodian Sejdiu</li>
+		<li>Ideal Ahmeti</li>
+		<li>Planet Asllani</li>
+	</ol>
+
+
+	<dl>
+		<dt>Coffe</dt> <!-- dt = description term -->
+		<dd>Sugar</dd> <!-- dd = description data -->
+		<dd>Milk</dd>
+		<dd>Grounded beans</dd>
+	</dl>
+
+
+
 
 </body>
 </html>
