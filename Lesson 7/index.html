@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms</title>
+</head>
+<body>
+	<form>
+		<fieldset>
+        <legend>Login</legend>
+			<label for="firstName"> First Name:</label> <br>
+		<input type="text" name="firstName" id="firstName" value="John " readonly> <br> 
+			<label for="lastname">Last Name:</label> <br>
+		<input type="text" name="lastname" id="lastname" disabled> <br>
+			<label for="email"> E-mail:</label> <br>
+		<input type="email" name="email" required size="34"> <br> 
+			<label for="password">Password:</label> <br>
+		<input type="password" name="password" id="password" placeholder="Your password"> <br>
+
+		<label>Gender:</label> <br>
+			<input type="radio" name="gender" id="female" value="Female"> 
+			<label for="female">Female</label> <br>
+			<input type="radio" name="gender" id="male" value="Male"> 
+		<label for="male">Male</label> <br>
+
+		<label>Hobies:</label><br>
+			<input type="checkbox" name="gaming" id="gaming" value="Gaming">
+		<label for="gaming">Gaming</label><br>
+			<input type="checkbox" name="reading " id=" reading" value="Reading ">
+
+		<label for="reading ">Reading</label><br>
+			<input type="checkbox" name="football" id="football" value="Football ">
+
+		<label for="football ">Football</label><br>
+			<input type="checkbox" name="programer " id="programer" value="Programer">
+
+		<label for="programer ">Programer</label><br>
+			
+			<label for="pets"> Chose A Pet:</label> <br>
+			<select name="pets " id="pets">
+               <option value="dog">Dog</option>
+                <option value="Cat">Cat</option>
+                <option value="hamster">hamster</option>
+            </select> <br>
+
+           <textarea name="mesage" id="mesage" rows="10" cols="20"></textarea> <br>
+  <input type="submit" value="Submit">
+  </fieldset>
+	</form>
+
+ </body>
+</html>
