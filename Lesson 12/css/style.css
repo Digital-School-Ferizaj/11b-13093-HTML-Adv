@@ -1,0 +1,36 @@
+h1{
+	color: green;
+	letter-spacing: 20px;
+	word-spacing: 50px;
+}
+h2{
+	text-align: center;
+}
+p{
+	text-indent: 50px;
+}
+
+#mbi{
+	text-decoration: overline;
+}
+#mes{
+	text-decoration: line-through;
+}
+#poshte{
+	text-decoration: underline;
+	text-decoration-style: wavy;
+	text-decoration-color: red;
+}
+a{
+	text-decoration: none;
+}
+
+
+@font-face{
+	font-family: "Matcha Cih";
+	src: url("../fonts/Matcha Cih.otf");
+}
+
+h2{
+	font-family: "Matcha Cih";
+}
