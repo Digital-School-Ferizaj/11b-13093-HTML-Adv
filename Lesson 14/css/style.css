@@ -1,0 +1,114 @@
+/*
+There are four different combinators that we can use in CSS:
+
+①  descendant selector (space)
+②  child selector (>)
+③  adjacent sibling selector (+)
+④  general sibling selector (~)
+*/
+
+th, td{
+
+}
+
+article p{
+	background: blue;
+}
+
+article > p{
+	background: red;
+}
+
+article + p{
+	background: yellow;
+}
+
+p + article{
+	background: green;
+}
+
+article ~ p{
+	background: purple;
+}
+
+
+/*
+a:link
+a:visited
+a:hover
+a:active
+*/
+
+h3:first-child {
+	background: lime;
+}
+
+/*
+:first-child
+:nth-child(3)
+:nth-child(odd)
+:nth-child(even)
+*/
+
+input:in-range{
+	border: 3px solid green;
+}
+
+input:out-of-range{
+	border: 3px solid red;
+}
+
+input:required{
+	background-color: aquamarine;
+}
+
+input:first-of-type{
+	background: pink;
+}
+
+input:focus{
+	background: yellow;
+}
+
+input:invalid{
+	border: 5px solid red;
+}
+
+input:valid{
+	border: 5px solid green;
+}
+
+/*
+input:in-range
+input:out-of-range
+input:required
+input:focus
+input:first-of-type  
+input:last-of-type  
+input:valid
+input:invalid
+*/
+
+
+p::first-line{
+	color: white;
+}
+
+/*
+::first-line
+::before
+::after
+::selection
+*/
+
+h4::before{
+	content: ">  ";
+}
+h5::after{
+	content: url("https://cdn.iconscout.com/icon/free/png-256/free-apple-photos-icon-svg-download-png-493155.png");
+}
+
+p::selection{
+	background: red;
+	color: blue;
+}
