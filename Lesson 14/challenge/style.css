@@ -1,0 +1,15 @@
+nav ul li{
+	background-color: blue;
+	color: white;
+	display: inline-block;
+	margin: 0px;
+}
+nav a{
+	background-color: blue;
+	color: white;
+	padding: 20px;
+}
+
+nav a:visited{
+	color: white;
+}
