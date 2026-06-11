@@ -42,33 +42,3 @@ div{
 	height: 100px;
 }
 
-
-/*    ------   Nav Bar Lesson Part  --------    */
-body{
-	margin: 0px;
-}
-/* horizontal nav/menu */
-nav ul{
-	list-style-type: none;
-	margin: 0px;
-	padding: 0px;
-	overflow: hidden;
-	background: #333;
-}
-nav ul li{
-	float: left;
-}
-nav ul li a{
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-.active{
-	background: lightblue;
-	color: black;
-}
-nav li a:hover:not(.active){
-	background: #111;
-}

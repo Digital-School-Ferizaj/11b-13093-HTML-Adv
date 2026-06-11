@@ -1,0 +1,152 @@
+
+/*    ------   Nav Bar Lesson Part  --------    */
+body{
+	margin: 0px;
+}
+
+main{
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+/* horizontal nav/menu */
+nav{
+	position: sticky;
+	top: 0px;
+	z-index: 1;
+}
+
+nav ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	background: #333;
+}
+nav ul li{
+	float: left;
+}
+nav ul li a{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+.active{
+	background: lightblue;
+	color: black;
+}
+nav li a:hover:not(.active){
+	background: #111;
+}
+
+
+/*Mega Menu*/
+
+.nav {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.nav a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown button{
+	font-size: 16px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 14px 16px;
+	background: inherit;
+	margin: 0;
+}
+.nav a:hover, .dropdown:hover button{
+	background: #4caf50;
+}
+.dropdown-content{
+	display: none;
+	position: absolute;
+	background: #f9f9f9;
+	width: 100%;
+	left: 0;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);  
+	/* mrena-jasht(inset) 0px horizontalisht 8px verticalisht 16px blur 0px largsia ngjyra */
+	z-index: 1;
+}
+
+.dropdown:hover .dropdown-content{
+	display: block;
+}
+
+.column{
+	float: left;
+	width: 33.33%;
+	padding: 10px;
+	background: #ccc;
+	height: 250px;
+}
+.column a{
+	float: none;
+	color: black;
+	padding: 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.column a:hover{
+	background: #ddd;
+}
+
+/* Clear floats after the columns */
+.row:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+
+
+/*Vertical Menu*/
+
+#vertical-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+#vertical-menu li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+#vertical-menu li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#vertical-menu li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
