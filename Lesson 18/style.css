@@ -63,3 +63,179 @@ footer{
 	transform: scaleY(1.5);
 	margin: 50px;
 }
+
+#skewX{
+	transform: skewX(10deg);
+}
+
+#skewY{
+	transform: skewY(10deg);
+}
+
+/*
+matrix(a, b, c, d, tx, ty)
+
+	a b c d
+	Are <number>s describing the linear transformation.
+
+	tx ty
+	Are <number>s describing the translation to apply.
+
+
+matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()).
+
+*/
+
+
+/* --- 3D Transformations --- */
+
+#rotateX{
+	transform: rotateX(45deg);
+}
+#rotateY{
+	transform: rotateY(45deg);
+}
+#rotateZ{
+	transform: rotateZ(45deg);
+}
+
+
+/* --- Transitons --- */
+
+#transition1{
+	transition: background 6s;
+}
+#transition1:hover{
+	background-color: red;
+}
+
+
+#transition2{
+	transition: background 3s, border-radius 3s;
+	transition-delay: 2s;
+	transition-timing-function: ubiz-bezier(1,0.2,1,0.2);
+}
+#transition2:hover{
+	background-color: red;
+	border-radius: 50%;
+}
+
+/*
+Speed Curve of the transition (Transition-timing-function)
+	- linear value our transition will have the same speed from the start to the end.
+	- ease-in value our transition will have a slow start.
+	- ease-out value our transition will have a slow end.
+	- ease-in-out value our transition will have a slow start and slow end.
+	- cubiz-bezier(n,n,n,n) value we can define our own values in a cubiz bezier function.
+*/
+
+img{
+	width: 200px;
+}
+
+#zoom{
+	transform: scale(1.0);
+	transform: .3s ease-in-out;
+}
+#zoom:hover{
+	transform: scale(1.3);
+}
+
+
+#slide{
+	margin-left: 0px;
+	transition: .3 ease-in-out;
+}
+#slide:hover{
+	margin-left: 30px;
+}
+
+
+#blur{
+	filter: blur(3px);
+	transition: .3s ease-in-out;
+}
+#blur:hover{
+	filter: blur(0);
+}
+
+
+#gray{
+	filter: grayscale(100%);
+	transition: 3s ease-in-out;
+}
+#gray:hover{
+	filter: grayscale(0);
+}
+
+
+/* --- Animations --- */
+
+
+.element{
+	animation: 
+		pulse 5s infinite,
+		nudge 5s linear infinite alternate;
+}
+
+@keyframes pulse{
+	0%, 100%{
+		background-color: #001f3f;
+	}
+	50%{
+		background-color: #ff4136;
+	}
+}
+
+@keyframes nudge{
+	0%{
+		transform: rotate(-7deg);
+	}
+	100%{
+		transform: rotate(7deg);
+	}
+}
+
+/*
+	animation-name: declares the name of the @keyframes at-rule to manipulate.
+	animation-duration: the length of time it takes for an animation to complete one cycle.
+	animation-timing-function: establishes preset acceleration curves such as ease or linear.
+	animation-delay: the time between the element being loaded and the start of the animation sequence.
+	animation-direction: sets the direction of the animation after the cycle. Its default resets on each cycle.
+	animation-iteration-count: the number of times the animation should be performed.
+	animation-fill-mode: sets which values are applied before/after the animation.
+	For example, you can set the last state of the animation to remain on screen, or you can set it to switch back to before when the animation began.
+	animation-play-state: pause/play the animation.
+*/
+
+.loader{
+	width: 70%;
+	margin: 100px;
+}
+
+.loader img{
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	border-radius: 50%;
+	margin-right: 8px;
+	animation: bounce 8s infinite alternate;
+}
+
+@keyframes bounce{
+	to{
+		width: 150px;
+		height: 150px;
+		transform: translate3d(0, -50px, 0);
+	}
+}
+
+.loader img:nth-child(3){
+	animation-delay: 2s;
+}
+.loader img:nth-child(2){
+	animation-delay: 4s;
+}
+.loader img:nth-child(1){
+	animation-delay: 6s;
+}
