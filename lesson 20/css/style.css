@@ -55,9 +55,63 @@ nav li.active{
 	color: white;
 }
 
+/* service - pjesa e gjelber */
+
 #service{
 	background-color: #17c2a4;
+	min-height: 745px;
+	color: white;
 }
+
+/* title box */
+.title-box{
+	text-align: center;
+	max-width: 609px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.title-box h1{
+	margin-top: 0px;
+	margin-bottom: 10px;
+	padding-top: 100px;
+	font-size: 40px;
+	font-weight: bold;
+}
+.title-box hr{
+	width: 87px;
+	height: 4px;
+	background-color: rgba(0, 0, 0, 0.15);
+	border: 0px;
+}
+
+/* horizontal-box */
+.horizontal-box{
+	display: flex;
+	margin-top: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 100px;
+	width: 90%;
+}
+.horizontal-item{
+	width: 24%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.horizontal-item h2{
+	font-size: 24px;
+	font-weight: bold;
+	margin-top: 60px;
+}
+.horizontal-item p{
+	font-size: 16px;
+	line-height: 26;
+}
+
+
+
+
 
 #team{
 	background-color: #e7f1f8;
