@@ -1,0 +1,85 @@
+body{
+	margin: 0px;
+	font-family: "Titillium Web", sans-serif;
+	color: white;
+}
+.container{
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+}
+
+/* header - pjesa vjollce */
+
+#header{
+	background-color: rgb(135, 80, 156);
+	height: 600px;
+	padding-bottom: 100px;
+}
+header{
+	display: flex;
+	justify-content: space-around;
+	padding: 55px;
+}
+nav ul{
+	list-style: none;
+}
+nav li{
+	display: inline-block;
+	padding: 10px 16px;
+}
+nav a{
+	text-decoration: none;
+	color: white;
+}
+nav li.active{
+	background-color: #643a79;
+	border-radius: 5px;
+}
+
+#main-heading{
+	margin: 148px;
+	text-align: center;
+}
+#main-heading h1{
+	font-size: 42px;
+	font-weight: bold;
+	margin-top: 60;
+}
+#main-heading button{
+	background-color: #eb7d4b;
+	font-size: 18px;
+	border-radius: 5px;
+	padding: 25px 85px;
+	border: 0px;
+	color: white;
+}
+
+#service{
+	background-color: #17c2a4;
+}
+
+#team{
+	background-color: #e7f1f8;
+}
+
+#skills{
+	background-color: #ffffff;
+}
+
+#portfolio{
+	background-color: #ffdd99;
+}
+
+#reviews{
+	background-color: #d74680;
+
+}
+
+#contact{
+	background-color: #3c5499;
+}
+
+footer{
+	background-color: #344b8e;
+}
