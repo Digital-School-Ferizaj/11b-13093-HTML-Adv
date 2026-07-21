@@ -106,34 +106,189 @@ nav li.active{
 }
 .horizontal-item p{
 	font-size: 16px;
-	line-height: 26;
+	line-height: 26px;
 }
 
-
-
-
+/* team - pjesa e kalter e hapur */
 
 #team{
 	background-color: #e7f1f8;
+	color: black;
+	margin: 0px;
+	padding: 50px;
 }
+.horizontal-item h3{
+	color: deepskyblue;
+}
+
+/* skills - pjesa e bardhe */
 
 #skills{
 	background-color: #ffffff;
+	color: black;
+	margin: 0px;
+	padding: 50px;
 }
 
+/* portfolio - pjesa e verdhe */
 #portfolio{
 	background-color: #ffdd99;
+	color: black;
+	margin: 0px;
+	padding: 50px;
 }
+#portfoli-nav{
+	margin-top: 50px;
+}
+#portfoli-nav li{
+	display: inline-block;
+	padding: 10px 16px;
+	background-color: #ebc985;
+	border-radius: 5px;
+}
+#portfoli-nav a{
+	text-decoration: none;
+	color: black;
+}
+#portfoli-nav li.active{
+	background-color: white;
+}
+
+/* zigzag-box */
+.zigzag-box{
+	display: flex;
+	margin: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	padding-bottom: 100px;
+	flex-wrap: wrap;
+	row-gap: 50px;
+	justify-content: center;
+}
+.zigzag-item{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.zigzag-box button{
+	background-color: #17c2a4;
+	font-size: 18px;
+	border-radius: 5px;
+	padding: 25px 85px;
+	color: white;
+	border: 0px;
+	box-shadow: inset 0px -11px 8px -10px gray;
+}
+
+/* reviews - pjesa e kuqe */
 
 #reviews{
 	background-color: #d74680;
-
+	margin: 0px;
+	padding: 50px;
 }
+.review-item{
+	display: flex;
+	align-items: center;
+	width: 50%;
+}
+.review-item .zigzag-item{
+	text-align: left;
+}
+
+/* contact - pjesa e kalter */
 
 #contact{
 	background-color: #3c5499;
+	margin: 0px;
+	padding: 50px;
 }
+
+.contact-form{
+	max-width: 860px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.form-row{
+	display: flex;
+}
+
+input[type="text"], input[type="email"]{
+	width: 46%;
+	height: 56px;
+}
+
+input[type="text"], input[type="email"], textarea{
+	font-family: "Titillium Web", sans-serif;
+	color: white;
+	background-color: #273a71;
+	border: none;
+	font-size: 18px;
+	margin: 16px;
+	border-radius: 5px;
+	padding-left: 26px;
+}
+
+textarea{
+	height: 200px;
+	width: 100%;
+	padding-top: 24px;
+}
+
+input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::placeholder{
+	color: white;
+}
+
+input[type="button"]{
+	background-color: #30bae7;
+	border: none;
+	font-size: 18px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+	margin-top: 60px;
+	text-transform: uppercase;
+	padding: 25px 85px;
+	color: white;
+}
+
+/* footer - pjesa e fundit */
 
 footer{
 	background-color: #344b8e;
+	margin: 0px;
+	padding: 20px;
 }
+#footer-nav{
+	max-width: 945px;
+	margin-left: auto;
+	margin-right: auto;
+}
+footer nav{
+	padding-top: 25px;
+}
+footer ul{
+	margin: 0px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	display: flex;
+}
+footer li{
+	display: inline-block;
+	padding: 10px 20px 10px 20px;
+}
+footer a{
+	text-decoration: none;
+	color: white;
+	font-size: 24px;
+}
+footer a.active{
+	color: deepskyblue;
+}
+
+
+
+
