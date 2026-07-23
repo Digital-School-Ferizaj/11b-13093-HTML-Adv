@@ -1,37 +1,61 @@
+/* Makes padding part of an element's width */
+*{
+	box-sizing: border-box;
+}
+
+/* Prevents large images from overflowing */
+img{
+	max-width: 100%;
+	height: auto;
+}
+
 body{
 	margin: 0px;
 	font-family: "Titillium Web", sans-serif;
 	color: white;
 }
+
 .container{
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	height: 100%;
 }
 
+
 /* header - pjesa vjollce */
 
 #header{
 	background-color: rgb(135, 80, 156);
-	height: 600px;
+
+	/* Fixed height caused problems on smaller screens */
+	min-height: 600px;
+	height: auto;
+
 	padding-bottom: 100px;
 }
+
 header{
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
 	padding: 55px;
 }
+
 nav ul{
 	list-style: none;
 }
+
 nav li{
 	display: inline-block;
 	padding: 10px 16px;
 }
+
 nav a{
 	text-decoration: none;
 	color: white;
 }
+
 nav li.active{
 	background-color: #643a79;
 	border-radius: 5px;
@@ -41,11 +65,15 @@ nav li.active{
 	margin: 148px;
 	text-align: center;
 }
+
 #main-heading h1{
 	font-size: 42px;
 	font-weight: bold;
-	margin-top: 60;
+
+	/* 60 without px was invalid */
+	margin-top: 60px;
 }
+
 #main-heading button{
 	background-color: #eb7d4b;
 	font-size: 18px;
@@ -55,6 +83,7 @@ nav li.active{
 	color: white;
 }
 
+
 /* service - pjesa e gjelber */
 
 #service{
@@ -63,13 +92,16 @@ nav li.active{
 	color: white;
 }
 
+
 /* title box */
+
 .title-box{
 	text-align: center;
 	max-width: 609px;
 	margin-left: auto;
 	margin-right: auto;
 }
+
 .title-box h1{
 	margin-top: 0px;
 	margin-bottom: 10px;
@@ -77,6 +109,7 @@ nav li.active{
 	font-size: 40px;
 	font-weight: bold;
 }
+
 .title-box hr{
 	width: 87px;
 	height: 4px;
@@ -84,30 +117,37 @@ nav li.active{
 	border: 0px;
 }
 
+
 /* horizontal-box */
+
 .horizontal-box{
 	display: flex;
+	flex-wrap: wrap;
 	margin-top: 80px;
 	margin-left: auto;
 	margin-right: auto;
 	padding-bottom: 100px;
 	width: 90%;
 }
+
 .horizontal-item{
 	width: 24%;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 }
+
 .horizontal-item h2{
 	font-size: 24px;
 	font-weight: bold;
 	margin-top: 60px;
 }
+
 .horizontal-item p{
 	font-size: 16px;
 	line-height: 26px;
 }
+
 
 /* team - pjesa e kalter e hapur */
 
@@ -117,9 +157,11 @@ nav li.active{
 	margin: 0px;
 	padding: 50px;
 }
+
 .horizontal-item h3{
 	color: deepskyblue;
 }
+
 
 /* skills - pjesa e bardhe */
 
@@ -130,31 +172,41 @@ nav li.active{
 	padding: 50px;
 }
 
+
 /* portfolio - pjesa e verdhe */
+
 #portfolio{
 	background-color: #ffdd99;
 	color: black;
 	margin: 0px;
 	padding: 50px;
 }
+
 #portfoli-nav{
 	margin-top: 50px;
+	padding-left: 0px;
+	text-align: center;
 }
+
 #portfoli-nav li{
 	display: inline-block;
 	padding: 10px 16px;
 	background-color: #ebc985;
 	border-radius: 5px;
 }
+
 #portfoli-nav a{
 	text-decoration: none;
 	color: black;
 }
+
 #portfoli-nav li.active{
 	background-color: white;
 }
 
+
 /* zigzag-box */
+
 .zigzag-box{
 	display: flex;
 	margin: 80px;
@@ -166,6 +218,7 @@ nav li.active{
 	row-gap: 50px;
 	justify-content: center;
 }
+
 .zigzag-item{
 	width: 50%;
 	margin-left: auto;
@@ -183,6 +236,7 @@ nav li.active{
 	box-shadow: inset 0px -11px 8px -10px gray;
 }
 
+
 /* reviews - pjesa e kuqe */
 
 #reviews{
@@ -190,14 +244,18 @@ nav li.active{
 	margin: 0px;
 	padding: 50px;
 }
+
 .review-item{
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	width: 50%;
 }
+
 .review-item .zigzag-item{
 	text-align: left;
 }
+
 
 /* contact - pjesa e kalter */
 
@@ -212,16 +270,21 @@ nav li.active{
 	margin-left: auto;
 	margin-right: auto;
 }
+
 .form-row{
 	display: flex;
+	flex-wrap: wrap;
 }
 
-input[type="text"], input[type="email"]{
+input[type="text"],
+input[type="email"]{
 	width: 46%;
 	height: 56px;
 }
 
-input[type="text"], input[type="email"], textarea{
+input[type="text"],
+input[type="email"],
+textarea{
 	font-family: "Titillium Web", sans-serif;
 	color: white;
 	background-color: #273a71;
@@ -234,15 +297,22 @@ input[type="text"], input[type="email"], textarea{
 
 textarea{
 	height: 200px;
-	width: 100%;
+
+	/* The margins must be removed from the available width */
+	width: calc(100% - 32px);
+
 	padding-top: 24px;
+	resize: vertical;
 }
 
-input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::placeholder{
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder{
 	color: white;
 }
 
 input[type="button"]{
+	display: block;
 	background-color: #30bae7;
 	border: none;
 	font-size: 18px;
@@ -255,6 +325,7 @@ input[type="button"]{
 	color: white;
 }
 
+
 /* footer - pjesa e fundit */
 
 footer{
@@ -262,33 +333,246 @@ footer{
 	margin: 0px;
 	padding: 20px;
 }
+
 #footer-nav{
 	max-width: 945px;
 	margin-left: auto;
 	margin-right: auto;
 }
+
 footer nav{
 	padding-top: 25px;
 }
+
 footer ul{
 	margin: 0px;
+	padding-left: 0px;
 	padding-top: 25px;
 	padding-bottom: 25px;
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
+
 footer li{
 	display: inline-block;
 	padding: 10px 20px 10px 20px;
 }
+
 footer a{
 	text-decoration: none;
 	color: white;
 	font-size: 24px;
 }
+
 footer a.active{
 	color: deepskyblue;
 }
 
 
+/* --- responsive design / media query --- */
+
+@media only screen and (max-width: 800px){
+
+	/* HEADER */
+
+	#header{
+		min-height: auto;
+		padding-bottom: 60px;
+	}
+
+	header{
+		flex-direction: column;
+		padding: 30px 20px;
+	}
+
+	header nav{
+		width: 100%;
+	}
+
+	/*
+	Only changes the main header navigation.
+	The old selector changed all navigation lists.
+	*/
+	header nav ul li{
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	header nav ul li.active{
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+
+	header nav ul{
+		padding-left: 0px;
+	}
+
+	header img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#main-heading{
+		margin: 30px auto 0px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	#main-heading h1{
+		font-size: 24px;
+		width: 100%;
+		margin: 30px auto;
+	}
+
+	#main-heading button{
+		width: 90%;
+		max-width: 400px;
+		font-size: 18px;
+		margin: 0px;
+		padding: 15px;
+	}
 
 
+	/* SECTION TITLES */
+
+	.title-box{
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.title-box h1{
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 60px;
+		font-size: 30px;
+	}
+
+
+	/* HORIZONTAL SECTIONS */
+
+	.horizontal-box{
+		flex-direction: column;
+		width: 90%;
+		margin-top: 50px;
+		padding-bottom: 60px;
+		row-gap: 50px;
+	}
+
+	.horizontal-item{
+		width: 100%;
+	}
+
+	.horizontal-item h2{
+		margin-top: 30px;
+	}
+
+
+	/* SECTION PADDING */
+
+	#team,
+	#skills,
+	#portfolio,
+	#reviews,
+	#contact{
+		padding: 25px 15px;
+	}
+
+
+	/* PORTFOLIO NAVIGATION */
+
+	/*
+	Correct spelling according to the selector used above:
+	#portfoli-nav
+	*/
+	#portfoli-nav{
+		width: 90%;
+		margin: 40px auto 0px;
+		padding-left: 0px;
+		text-align: center;
+	}
+
+	#portfoli-nav li{
+		width: auto;
+		margin: 5px;
+	}
+
+
+	/* ZIGZAG CONTENT */
+
+	.zigzag-box{
+		flex-direction: column;
+		width: 90%;
+		margin: 50px auto 0px;
+		padding-bottom: 60px;
+		row-gap: 50px;
+	}
+
+	.zigzag-item{
+		width: 100%;
+	}
+
+	.zigzag-box button{
+		width: 90%;
+		max-width: 400px;
+		padding: 15px;
+	}
+
+
+	/* REVIEWS */
+
+	.review-item{
+		width: 100%;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.review-item .zigzag-item{
+		width: 100%;
+		text-align: center;
+	}
+
+
+	/* CONTACT FORM */
+
+	.form-row{
+		flex-direction: column;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	textarea{
+		width: 90%;
+		margin: 8px auto;
+	}
+
+	input[type="button"]{
+		display: block;
+		width: 90%;
+		max-width: 400px;
+		font-size: 18px;
+		margin: 30px auto 0px;
+		padding: 15px;
+	}
+
+
+	/* FOOTER */
+
+	footer ul{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	footer ul li{
+		width: 100%;
+		text-align: center;
+	}
+
+	footer a{
+		font-size: 20px;
+	}
+}

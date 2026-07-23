@@ -1,0 +1,80 @@
+body{
+	background-color: blue;
+	color: white;
+}
+
+/*
+
+@media type and (feature)
+
+● @media keyword is used to create a media query
+● The type part is used to specify the type of device for which the CSS code inside the media query will be applied. 
+● The feature part is used to add different kinds of conditions that should be evaluated to true for the code to be executed. In this part, we can create breakpoints for different screen resolutions using min-width, max-width, min-height, max-height properties.
+
+Values that we can use in the type part are:
+● All - used when we want the style to apply for all media type devices
+● Print - used when we want a specific style to apply when we print something
+● Screen - used when we want the style to apply for computer screens, tablets, smartphones, etc.
+● Speech - used for screen readers that “read” the text of a page out loud
+
+*/
+
+@media print{
+	body{
+		background-color: white;
+		color: black;
+	}
+}
+
+@media all and (max-width:600px){
+	body{
+		background-color: red;
+	}
+	img{
+		width: 100%;
+	}
+}
+
+@media all and (min-width: 900px){
+	img{
+		width: 25%;
+	}
+}
+
+
+
+/* landscape = height < width --- horizontalisht */
+
+@media all and (orientation: landscape){
+	h1{
+		font-size: 80px;
+	}
+}
+
+/* portrait = height > width --- vertikalisht */
+
+@media all and (orientation: portrait){
+	h1{
+		font-size: 30px;
+	}
+}
+
+/*
+Breakpoints:
+
+Extra small devices (phones, 600px and down) 
+@media only screen and (max-width: 600px) 
+
+Small devices (portrait tablets and large phones, 600px and up) 
+@media only screen and (min-width: 600px) 
+
+Medium devices (landscape tablets, 768px and up) 
+@media only screen and (min-width: 768px) 
+
+Large devices (laptops/desktops, 992px and up) 
+@media only screen and (min-width: 992px) 
+
+Extra large devices (large laptops and desktops, 1200px and up) 
+@media only screen and (min-width: 1200px) 
+*/
+
